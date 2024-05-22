@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "name": "Install dependencies",
+      "command": "npm install"
+    },
+    {
+      "name": "Build the project",
+      "command": "npm run build"
+    }
+  ],
+  "artifacts": {
+    "baseDirectory": ".next",
+    "files": [
+      "**/*"
+    ]
+  }
+}
