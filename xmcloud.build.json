@@ -13,9 +13,7 @@
       "nodeVersion": "20.12.2",
       "jssDeploymentSecret": "super-secret-value",
       "enabled": true,
-      "type": "jss",
-      "buildCommand": "npm run build",
-      "runCommand": "npm run start"
+      "type": "jss"
     }
   },
   "transforms": [],
