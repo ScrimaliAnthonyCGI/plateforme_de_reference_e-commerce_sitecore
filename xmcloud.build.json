@@ -8,9 +8,9 @@
   },
   "buildTargets": [],
   "renderingHosts": {
-    "my-nextjs-app": {
+    "plateforme": {
       "path": "./",
-      "nodeVersion": "16.13.1",
+      "nodeVersion": "20.12.2",
       "jssDeploymentSecret": "super-secret-value",
       "enabled": true,
       "type": "jss",
@@ -47,6 +47,6 @@
         "publishSubItems": true
       }
     },
-    "taskTimeOut": "00:46:00"
+    "taskTimeOut": "00:45:00"
   }
 }
