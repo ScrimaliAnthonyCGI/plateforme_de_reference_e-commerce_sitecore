@@ -29,7 +29,7 @@
         ]
       },
       "scsModules": {
-        "modules": []
+        "modules": ["Module1", "Module2"]
       },
       "populateSchema": {
         "indexNames": []
