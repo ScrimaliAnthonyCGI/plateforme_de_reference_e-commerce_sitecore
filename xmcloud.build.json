@@ -1,40 +1,19 @@
 {
   "deployItems": {
-    "modules": [
-      "Foundation.*",
-      "Feature.*",
-      "Project.*"
-    ]
+    "modules": []
   },
-  "buildTargets": [
-    "./src/CM/Platform.csproj",
-    "./src/CM/Root.sln"
-  ],
+  "buildTargets": [],
   "renderingHosts": {
     "my-nextjs-app": {
-      "path": "./src/rendering",
-      "nodeVersion": "20.12.2",
-      "jssDeploymentSecret": "super-secret-value",
+      "path": "./",
+      "nodeVersion": "16.13.1",
       "enabled": true,
       "type": "jss",
       "buildCommand": "npm run build",
       "runCommand": "npm run start"
     }
   },
-  "transforms": [
-    {
-      "xdtPath": "/xdts/<some-transforms>/",
-      "targetPath": "/<somewhere>/"
-    },
-    {
-      "xdtPath": "/xdts/<trasforms-at-the-root>/",
-      "targetPath": "/"
-    },
-    {
-      "xdtPath": "/xdts/web.config.xdt",
-      "targetPath": "/web.config"
-    }    
-  ],
+  "transforms": [],
   "postActions": {
     "actions": {
       "warmUpCm": {
@@ -46,7 +25,7 @@
         ]
       },
       "scsModules": {
-        "modules": ["Module1", "Module2"]
+        "modules": []
       },
       "populateSchema": {
         "indexNames": []
