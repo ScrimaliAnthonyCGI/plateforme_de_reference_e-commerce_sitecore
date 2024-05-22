@@ -1,4 +1,13 @@
 {
   "build": {
+    "cmd": "npm install && npm run build",
+    "args": [],
+    "output": ".next",
+    "copy": [
+      {
+        "source": ".",
+        "destination": "."
+      }
+    ]
   }
 }
