@@ -11,7 +11,7 @@
     "my-nextjs-app": {
       "path": "./",
       "nodeVersion": "16.13.1",
-      "jssDeploymentSecret": "super-secret-values",
+      "jssDeploymentSecret": "super-secret-value",
       "enabled": true,
       "type": "jss",
       "buildCommand": "npm run build",
