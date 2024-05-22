@@ -1,19 +1,67 @@
 {
-  "version": 1,
-  "steps": [
+  "deployItems": {
+    "modules": [
+      "Foundation.*",
+      "Feature.*",
+      "Project.*"
+    ]
+  },
+  "buildTargets": [
+    "./src/CM/Platform.csproj",
+    "./src/CM/Root.sln"
+  ],
+  "renderingHosts": {
+    "my-nextjs-app": {
+      "path": "./src/rendering",
+      "nodeVersion": "20.12.2",
+      "enabled": true,
+      "type": "jss",
+      "buildCommand": "npm run build",
+      "runCommand": "npm run start"
+    }
+  },
+  "transforms": [
     {
-      "name": "Install dependencies",
-      "command": "npm install"
+      "xdtPath": "/xdts/<some-transforms>/",
+      "targetPath": "/<somewhere>/"
     },
     {
-      "name": "Build the project",
-      "command": "npm run build"
-    }
+      "xdtPath": "/xdts/<trasforms-at-the-root>/",
+      "targetPath": "/"
+    },
+    {
+      "xdtPath": "/xdts/web.config.xdt",
+      "targetPath": "/web.config"
+    }    
   ],
-  "artifacts": {
-    "baseDirectory": ".next",
-    "files": [
-      "**/*"
-    ]
+  "postActions": {
+    "actions": {
+      "warmUpCm": {
+        "urls": [
+          "/sitecore/shell",
+          "/sitecore/shell/Applications/Content%20Editor.aspx?sc_bw=1",
+          "/sitecore/client/Applications/Launchpad",
+          "/sitecore/client/Applications/ControlPanel.aspx?sc_bw=1"
+        ]
+      },
+      "scsModules": {
+        "modules": ["Module1", "Module2"]
+      },
+      "populateSchema": {
+        "indexNames": []
+      },
+      "reindex": {
+        "indexNames": []
+      },
+      "publish": {
+        "path": "/sitecore/content/Home",
+        "languages": ["en"],
+        "itemIds": [],
+        "targets": [],
+        "republish": true,
+        "publishSubItems": true
+      }
+    },
+    "taskTimeOut": "00:45:00"
   }
 }
