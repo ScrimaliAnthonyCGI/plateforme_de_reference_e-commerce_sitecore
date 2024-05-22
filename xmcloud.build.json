@@ -1,50 +1,30 @@
 {
-  "deployItems": {
-    "modules": [
-      "Foundation.*",
-      "Feature.*",
-      "Project.*"
-    ]
-  },
-  "buildTargets": [],
   "renderingHosts": {
     "plateforme": {
       "path": "./",
-      "nodeVersion": "20.12.2",
-      "jssDeploymentSecret": "super-secret-value",
+      "nodeVersion": "20.10.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
-      "type": "jss"
+      "type": "jss",
+      "buildCommand": "build",
+      "runCommand": "start"
     }
   },
-  "transforms": [],
   "postActions": {
-    "actions": {
-      "warmUpCm": {
-        "urls": [
-          "/sitecore/shell",
-          "/sitecore/shell/Applications/Content%20Editor.aspx?sc_bw=1",
-          "/sitecore/client/Applications/Launchpad",
-          "/sitecore/client/Applications/ControlPanel.aspx?sc_bw=1"
-        ]
-      },
-      "scsModules": {
-        "modules": ["Module1", "Module2"]
-      },
-      "populateSchema": {
-        "indexNames": []
-      },
-      "reindex": {
-        "indexNames": []
-      },
-      "publish": {
-        "path": "/sitecore/content/Home",
-        "languages": ["en"],
-        "itemIds": [],
-        "targets": [],
-        "republish": true,
-        "publishSubItems": true
+      "actions":{
+        "warmUpCm": {
+          "urls": [
+            "/sitecore/shell",
+            "/sitecore/shell/Applications/Content%20Editor.aspx?sc_bw=1",
+            "/sitecore/client/Applications/Launchpad"
+          ]
+        },
+        "populateSchema": {
+          "indexNames": []
+        },
+        "reindex": {
+          "indexNames": []
+        }
       }
-    },
-    "taskTimeOut": "00:45:00"
   }
 }
