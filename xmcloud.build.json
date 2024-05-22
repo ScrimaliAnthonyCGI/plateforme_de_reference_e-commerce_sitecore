@@ -1,6 +1,10 @@
 {
   "deployItems": {
-    "modules": []
+    "modules": [
+      "Foundation.*",
+      "Feature.*",
+      "Project.*"
+    ]
   },
   "buildTargets": [],
   "renderingHosts": {
